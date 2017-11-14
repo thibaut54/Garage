@@ -6,16 +6,18 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.Serializable;
+//import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Garage implements Serializable{
+import fr.oc.vehicule.Vehicule;
+
+public class Garage {
 	
-	private static final long serialVersionUID = 1L;
+	//private static final long serialVersionUID = 1L;
 	
 
-	private List<Vehicule> voitures;
+	public List<Vehicule> voitures;
 	private String logo = "****************************\n"
  						+ "*  Garage OpenClassrooms   *\n"
  						+ "****************************";
@@ -24,56 +26,63 @@ public class Garage implements Serializable{
 	//par défaut
 	public Garage() {
 		voitures = new ArrayList<>();
-		voitures = deserialArray(voitures);
+		voitures = unserialArray( voitures );
 	}
 	
-
-	//----------GETTERS
-	public List<Vehicule> getVoitures() {
-		return voitures;
-	}
 	
 	//----------METHODES
-	public void addVoiture(Vehicule voit) {
+	public void addVoiture( Vehicule voit ) {
 		voitures.add( voit );
-//		serialization(this);
 		serialArray( voitures );
-		
+
 	}
 	
-	public void serialArray(List<Vehicule> voitures) {
+	//Methode de serialization
+	public void serialArray( List<Vehicule> vSerial ) {
 		try {
-			FileOutputStream fos = new FileOutputStream( "vehiculeList.txt" );
-			ObjectOutputStream oos = new ObjectOutputStream(fos);
-			oos.writeObject( voitures );
+			FileOutputStream fos = new FileOutputStream( "garage.txt" );
+			ObjectOutputStream oos = new ObjectOutputStream( fos );
+			oos.writeObject( vSerial );
 			oos.close();
-		} catch (IOException e) {
+		} catch ( IOException e ) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 	
+	//Methode de dé-serialization
 	@SuppressWarnings("unchecked")
-	public List<Vehicule> deserialArray(List<Vehicule> voitures) {
-		File f = new File("vehiculeList.txt");
+	public List<Vehicule> unserialArray( List<Vehicule> vUnserial ) {
+		File f = new File( "garage.txt" );
 		if( f.exists() ) {
 			try {
-				FileInputStream fis = new FileInputStream( "vehiculeList.txt" );
-				ObjectInputStream ois = new ObjectInputStream(fis);
-				voitures = (List<Vehicule>)ois.readObject();
+				FileInputStream fis = new FileInputStream( "garage.txt" );
+				ObjectInputStream ois = new ObjectInputStream( fis );
+				retraitDoublons( vUnserial );
+				vUnserial = ( List<Vehicule> )ois.readObject();
 				System.out.println( logo );
-//				System.out.println( voitures );
 				ois.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
+			} catch ( IOException e ) {
 				e.printStackTrace();
-			} catch (ClassNotFoundException e) {
+			} catch ( ClassNotFoundException e ) {
 				e.printStackTrace();
 			}
 		}else {
 			System.out.println( "Aucune voiture sauvegardée !\n" + logo );
 		}
-		return voitures;
+		return vUnserial;
+	}
+	
+	public List<Vehicule> retraitDoublons( List<Vehicule> V ){
+		for( int i = 0; i < V.size(); i++ ){
+			for( int j = i + 1; j<V.size(); j++ ){
+				if( V.get( i ).equals( V.get(j) ) ){
+					V.remove( j );
+					j--;
+				}
+			}
+		}
+		return V;
 	}
 	
 	@Override
@@ -84,7 +93,31 @@ public class Garage implements Serializable{
 		};
 		return str;
 	}
-
 	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((voitures == null) ? 0 : voitures.hashCode());
+		return result;
+	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Garage other = (Garage) obj;
+		if (voitures == null) {
+			if (other.voitures != null)
+				return false;
+		} else if (!voitures.equals(other.voitures))
+			return false;
+		return true;
+	}
+	
+	
 }
