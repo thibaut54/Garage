@@ -8,7 +8,6 @@ public class D4 extends Vehicule {
 	//par défaut
 	public D4() {
 		this.setPrixVehicule( 25147d );
-		this.setNom( "D4" );
 		this.setMarque( Marque.TROEN );
 		this.setMoteur( null );
 	}

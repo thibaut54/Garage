@@ -6,43 +6,47 @@ public class Climatisation implements Option, Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
-	private String nomOption;
 	private Double prixOption;
 
 
 	//----------CONSTRUCTEUR----------
 	//par défaut
 	public Climatisation() {
-		this.setNomOption( "Climatisation" );
-		this.setPrixOption( 347.3 );
+		prixOption = 347.3 ;
 	}
-	
-	//avec paramètres
-	public Climatisation( String nomOption, Double prixOption ) {
-		this.setNomOption( nomOption );
-		this.setPrixOption( prixOption );
-	}
-	
-	
+		
 	//----------GETTERS----------
-	public String getNomOption() {
-		return nomOption;
-	}
-	
 	public Double getPrixOption() {
 		return prixOption;
 	}
 
-	//----------SETTERS----------
-	public void setNomOption(String nomOption) {
-		this.nomOption = nomOption;
-	}
-	
-	public void setPrixOption( Double prixOption ) {
-		this.prixOption = prixOption;
-	}
 
 	public String toString() {
-		return this.getNomOption() + " (" + getPrixOption() + "€)" ;
+		return getClass().getSimpleName() + " (" + getPrixOption() + "€)" ;
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		long temp;
+		temp = Double.doubleToLongBits(prixOption);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Climatisation other = (Climatisation) obj;
+		if (Double.doubleToLongBits(prixOption) != Double.doubleToLongBits(other.prixOption))
+			return false;
+		return true;
+	}
+	
 }

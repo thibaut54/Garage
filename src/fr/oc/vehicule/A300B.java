@@ -8,7 +8,6 @@ public class A300B extends Vehicule {
 	//par défaut
 	public A300B() {
 		this.setPrixVehicule( 28457d );
-		this.setNom( "A300B" );
 		this.setMarque( Marque.RENO );
 		this.setMoteur( null );
 	}

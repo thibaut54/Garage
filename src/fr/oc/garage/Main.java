@@ -28,6 +28,13 @@ public class Main {
     	lag1.addOption(new VitreElectrique());
     	garage.addVoiture(lag1);
     	
+    	Vehicule lag3 = new Lagouna();
+    	lag3.setMoteur(new MoteurEssence("150 Chevaux", 10256d));
+    	lag3.addOption(new GPS());
+    	lag3.addOption(new SiegeChauffant());
+    	lag3.addOption(new VitreElectrique());
+    	garage.addVoiture(lag3);
+    	
     	Vehicule A300B_2 = new A300B();
     	A300B_2.setMoteur(new MoteurElectrique("1500 W", 1234d));
     	A300B_2.addOption(new Climatisation());
@@ -40,7 +47,7 @@ public class Main {
     	d4_1.addOption(new BarreDeToit());
     	d4_1.addOption(new Climatisation());
     	d4_1.addOption(new GPS());
-    	garage.addVoiture(d4_1);   	 
+    	garage.addVoiture(d4_1); 
    	 
     	Vehicule lag2 = new Lagouna();
     	lag2.setMoteur(new MoteurDiesel("500 Hdi", 456987d));
