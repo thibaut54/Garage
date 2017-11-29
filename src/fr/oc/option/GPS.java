@@ -6,7 +6,7 @@ public class GPS implements Option, Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
-	private Double prixOption;
+	private double prixOption;
 
 
 	//----------CONSTRUCTEUR----------
@@ -22,7 +22,7 @@ public class GPS implements Option, Serializable {
 //	}
 	
 	//----------GETTERS----------
-	public Double getPrixOption() {
+	public double getPrixOption() {
 		return prixOption;
 	}
 

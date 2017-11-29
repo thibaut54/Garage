@@ -57,13 +57,13 @@ public class Garage {
 				FileInputStream fis = new FileInputStream( "garage.txt" );
 				ObjectInputStream ois = new ObjectInputStream( fis );
 				vUnserial = ( List<Vehicule> )ois.readObject();
-				System.out.println( logo );
 				ois.close();
 			} catch ( IOException e ) {
-				System.err.println( "Aucune voiture sauvegardée !\n" + logo );
+				System.err.println( "Aucune voiture sauvegardée !" );
 			} catch ( ClassNotFoundException e ) {
 				e.printStackTrace();
 			} 
+			System.out.println( logo );
 		return vUnserial;
 	}
 

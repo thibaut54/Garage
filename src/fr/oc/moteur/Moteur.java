@@ -9,7 +9,7 @@ public abstract class Moteur implements Serializable{
 	//----------ATTRIBUTS----------
 	private TypeMoteur type ;
 	private String cylindre ;
-	private Double prixMoteur ;
+	private double prixMoteur ;
 	
 	//----------GETTERS----------
 	public TypeMoteur getType() {
@@ -20,7 +20,7 @@ public abstract class Moteur implements Serializable{
 		return cylindre;
 	}
 	
-	public Double getPrixMoteur() {
+	public double getPrixMoteur() {
 		return prixMoteur;
 	}
 	
@@ -33,7 +33,7 @@ public abstract class Moteur implements Serializable{
 		this.cylindre = cylindre;
 	}
 
-	public void setPrixMoteur(Double prixMoteur) {
+	public void setPrixMoteur(double prixMoteur) {
 		this.prixMoteur = prixMoteur;
 	}
 
@@ -47,7 +47,9 @@ public abstract class Moteur implements Serializable{
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((cylindre == null) ? 0 : cylindre.hashCode());
-		result = prime * result + ((prixMoteur == null) ? 0 : prixMoteur.hashCode());
+		long temp;
+		temp = Double.doubleToLongBits(prixMoteur);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
 		result = prime * result + ((type == null) ? 0 : type.hashCode());
 		return result;
 	}
@@ -66,10 +68,7 @@ public abstract class Moteur implements Serializable{
 				return false;
 		} else if (!cylindre.equals(other.cylindre))
 			return false;
-		if (prixMoteur == null) {
-			if (other.prixMoteur != null)
-				return false;
-		} else if (!prixMoteur.equals(other.prixMoteur))
+		if (Double.doubleToLongBits(prixMoteur) != Double.doubleToLongBits(other.prixMoteur))
 			return false;
 		if (type != other.type)
 			return false;

@@ -12,8 +12,8 @@ public abstract class Vehicule implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	//----------ATTRIBUTS----------
-	private Double prixVehicule;
-	private Double prixVehiculeAvecOptions; // Comment se passe de cette variable pour récupérer les prix des options de chaque véhicule dans Vehicule ?
+	private double prixVehicule;
+	private double prixVehiculeAvecOptions; // Comment se passe de cette variable pour récupérer les prix des options de chaque véhicule dans Vehicule ?
 	private List<Option> options = new ArrayList<>();
 	private Marque nomMarque;
 	private Moteur moteur;
@@ -26,11 +26,11 @@ public abstract class Vehicule implements Serializable{
 	}
 	
 	//----------GETTERS----------
-	public Double getPrixVehicule() {
+	public double getPrixVehicule() {
 		return prixVehicule;
 	}
 	
-	public Double getPrixVehiculeAvecOptions() {
+	public double getPrixVehiculeAvecOptions() {
 		prixVehiculeAvecOptions = this.getPrixVehicule();
 		for (Option option : options) {
 			prixVehiculeAvecOptions = ( prixVehiculeAvecOptions + option.getPrixOption() );
@@ -52,11 +52,11 @@ public abstract class Vehicule implements Serializable{
 	
 	
 	//----------SETTERS----------
-	public void setPrixVehicule(Double prixVehicule) {
+	public void setPrixVehicule(double prixVehicule) {
 		this.prixVehicule = prixVehicule;
 	}
 	
-	public void setPrixVehiculeAvecOptions(Double prixVehiculeAvecOptions) {
+	public void setPrixVehiculeAvecOptions(double prixVehiculeAvecOptions) {
 		this.prixVehiculeAvecOptions = prixVehiculeAvecOptions;
 	}
 	
@@ -93,7 +93,6 @@ public abstract class Vehicule implements Serializable{
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		return result;
 	}
-	
 
 	@Override
 	public boolean equals(Object obj) {
@@ -116,11 +115,13 @@ public abstract class Vehicule implements Serializable{
 				return false;
 		} else if (!options.equals(other.options))
 			return false;
-//		if (Double.doubleToLongBits(prixVehicule) != Double.doubleToLongBits(other.prixVehicule))
-//			return false;
-//		if (Double.doubleToLongBits(prixVehiculeAvecOptions) != Double.doubleToLongBits(other.prixVehiculeAvecOptions))
-//			return false;
+		if (Double.doubleToLongBits(prixVehicule) != Double.doubleToLongBits(other.prixVehicule))
+			return false;
+		if (Double.doubleToLongBits(prixVehiculeAvecOptions) != Double.doubleToLongBits(other.prixVehiculeAvecOptions))
+			return false;
 		return true;
 	}
+
+
 	
 }

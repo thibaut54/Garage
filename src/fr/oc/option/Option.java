@@ -2,6 +2,6 @@ package fr.oc.option;
 
 public interface Option {
 		
-	public Double getPrixOption();
+	public double getPrixOption();
 
 }

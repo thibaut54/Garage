@@ -6,7 +6,7 @@ public class BarreDeToit implements Option, Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
-	private Double prixOption;
+	private double prixOption;
 
 
 	//----------CONSTRUCTEUR----------
@@ -17,7 +17,7 @@ public class BarreDeToit implements Option, Serializable{
 		
 	
 	//----------GETTERS----------
-	public Double getPrixOption() {
+	public double getPrixOption() {
 		return prixOption;
 	}
 
@@ -53,9 +53,3 @@ public class BarreDeToit implements Option, Serializable{
 	}
 	
 }
-
-//if (prixOption == null) {
-//	if (other.prixOption != null)
-//		return false;
-//} else if (!prixOption.equals(other.prixOption))
-//	return false;

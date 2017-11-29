@@ -6,7 +6,7 @@ public class SiegeChauffant implements Option, Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
-	private Double prixOption;
+	private double prixOption;
 
 
 	//----------CONSTRUCTEUR----------
@@ -17,7 +17,7 @@ public class SiegeChauffant implements Option, Serializable {
 	
 
 	//----------GETTERS----------
-	public Double getPrixOption() {
+	public double getPrixOption() {
 		return prixOption;
 	}
 

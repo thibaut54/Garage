@@ -6,7 +6,7 @@ public class MoteurDiesel extends Moteur {
 
 	//----------CONSTRUCTEURS----------
 	//avec paramètres
-	public MoteurDiesel( String cylindre, Double prixMoteur ) {
+	public MoteurDiesel( String cylindre, double prixMoteur ) {
 		this.setType( TypeMoteur.DIESEL );
 		this.setCylindre( cylindre );
 		this.setPrixMoteur( prixMoteur );

@@ -6,7 +6,7 @@ public class MoteurEssence extends Moteur {
 
 	//----------CONSTRUCTEURS----------
 	//avec paramètres
-	public MoteurEssence( String cylindre, Double prixMoteur ) {
+	public MoteurEssence( String cylindre, double prixMoteur ) {
 		this.setType( TypeMoteur.ESSENCE );
 		this.setCylindre( cylindre );
 		this.setPrixMoteur( prixMoteur );

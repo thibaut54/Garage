@@ -11,4 +11,5 @@ public class A300B extends Vehicule {
 		this.setMarque( Marque.RENO );
 		this.setMoteur( null );
 	}
+	
 }
