@@ -7,8 +7,7 @@ public class MoteurElectrique extends Moteur {
 	//----------CONSTRUCTEURS----------
 	//avec paramètres
 	public MoteurElectrique( String cylindre, double prixMoteur ) {
-		this.setType( TypeMoteur.ELECTRIQUE );
-		this.setCylindre( cylindre );
-		this.setPrixMoteur( prixMoteur );
+		super( cylindre,prixMoteur );
+		this.type = TypeMoteur.ELECTRIQUE ;
 	}
 }

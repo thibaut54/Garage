@@ -12,71 +12,51 @@ public abstract class Vehicule implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	//----------ATTRIBUTS----------
-	private double prixVehicule;
-	private double prixVehiculeAvecOptions; // Comment se passe de cette variable pour récupérer les prix des options de chaque véhicule dans Vehicule ?
+	private double prix;
 	private List<Option> options = new ArrayList<>();
 	private Marque nomMarque;
 	private Moteur moteur;
 
 	
 	//----------CONSTRUCTEUR----------
-	//par défaut
-	public Vehicule() {
-
+	public Vehicule( double prix , Marque nomMarque ) {
+		this.prix = prix;
+		this.nomMarque = nomMarque;
 	}
+	
 	
 	//----------GETTERS----------
-	public double getPrixVehicule() {
-		return prixVehicule;
-	}
-	
-	public double getPrixVehiculeAvecOptions() {
-		prixVehiculeAvecOptions = this.getPrixVehicule();
+	public double getPrix() {
+		double prixOptionTotal = 0.0;
 		for (Option option : options) {
-			prixVehiculeAvecOptions = ( prixVehiculeAvecOptions + option.getPrixOption() );
+			prixOptionTotal += option.getPrix()  ;
 		}
-		return prixVehiculeAvecOptions;
-	}
-	
-	public Marque getMarque() {
-		return nomMarque;
-	}
-	
-	public Moteur getMoteur() {
-		return moteur;
-	}
-	
-	public List<Option> getOptions() {
-		return options;
+		return prix + prixOptionTotal;
 	}
 	
 	
 	//----------SETTERS----------
-	public void setPrixVehicule(double prixVehicule) {
-		this.prixVehicule = prixVehicule;
-	}
-	
-	public void setPrixVehiculeAvecOptions(double prixVehiculeAvecOptions) {
-		this.prixVehiculeAvecOptions = prixVehiculeAvecOptions;
-	}
-	
-	public void setMarque(Marque nomMarque) {
-		this.nomMarque = nomMarque;
-	}
-
-	public void setMoteur(Moteur moteur) {
+	public void setMoteur( Moteur moteur ) {
 		this.moteur = moteur;
 	}
 	
-	public void addOption(Option opt) {
+	public void addOption( Option opt ) {
 		options.add( opt );
 	}
 	
 	@Override
 	public  String toString() {
-		return this.getMarque() + " : " + this.getClass().getSimpleName() + " Moteur " + this.getMoteur() 
-				+ " (" + this.getPrixVehicule() + "€) "  + this.getOptions() + " d'une valeur total de " 
-				+ this.getPrixVehiculeAvecOptions() + " €\n";   	
+		String str = "";
+		for (int i = 0 ; i < options.size() ; i++) {
+			str += options.get(i).getClass().getSimpleName() + " (" + options.get(i).getPrix() + "€)";
+			if(i != (options.size()-1) ) {
+				str += ", ";
+			} //Ici, obligation de faire une boucle un peu complexe pour une question de mise en forme
+			  //Plus précisement, pour ne pas avoir un ", " de trop à l'affichage de la liste d'option 
+		}
+		return "Voiture " + nomMarque + " : " + getClass().getSimpleName() + " Moteur " + moteur 
+				+ " (" + this.prix + "€) ["  + str + "] d'une valeur total de " 
+				+ getPrix() + " €\n";   	
 	}
 
 	@Override
@@ -87,9 +67,7 @@ public abstract class Vehicule implements Serializable{
 		result = prime * result + ((nomMarque == null) ? 0 : nomMarque.hashCode());
 		result = prime * result + ((options == null) ? 0 : options.hashCode());
 		long temp;
-		temp = Double.doubleToLongBits(prixVehicule);
-		result = prime * result + (int) (temp ^ (temp >>> 32));
-		temp = Double.doubleToLongBits(prixVehiculeAvecOptions);
+		temp = Double.doubleToLongBits(prix);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		return result;
 	}
@@ -115,13 +93,9 @@ public abstract class Vehicule implements Serializable{
 				return false;
 		} else if (!options.equals(other.options))
 			return false;
-		if (Double.doubleToLongBits(prixVehicule) != Double.doubleToLongBits(other.prixVehicule))
-			return false;
-		if (Double.doubleToLongBits(prixVehiculeAvecOptions) != Double.doubleToLongBits(other.prixVehiculeAvecOptions))
+		if (Double.doubleToLongBits(prix) != Double.doubleToLongBits(other.prix))
 			return false;
 		return true;
 	}
-
-
 	
 }

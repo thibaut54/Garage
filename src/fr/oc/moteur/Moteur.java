@@ -7,39 +7,20 @@ public abstract class Moteur implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	//----------ATTRIBUTS----------
-	private TypeMoteur type ;
+	protected TypeMoteur type ;
 	private String cylindre ;
 	private double prixMoteur ;
 	
-	//----------GETTERS----------
-	public TypeMoteur getType() {
-		return type;
-	}
-	
-	public String getCylindre() {
-		return cylindre;
-	}
-	
-	public double getPrixMoteur() {
-		return prixMoteur;
-	}
-	
-	//----------SETTERS----------
-	public void setType(TypeMoteur type) {
-		this.type = type;
+	//----------CONSTRUCTEUR----------
+	public Moteur( String cylindre, double prixMoteur ) {
+		this.cylindre = cylindre ;
+		this.prixMoteur = prixMoteur ;
 	}
 
-	public void setCylindre(String cylindre) {
-		this.cylindre = cylindre;
-	}
-
-	public void setPrixMoteur(double prixMoteur) {
-		this.prixMoteur = prixMoteur;
-	}
 
 	@Override
 	public String toString() {
-		return this.getType() + " " + this.getCylindre();
+		return type + " " + cylindre;
 	}
 
 	@Override

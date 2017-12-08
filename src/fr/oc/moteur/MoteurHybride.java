@@ -7,8 +7,7 @@ public class MoteurHybride extends Moteur {
 	//----------CONSTRUCTEURS----------
 	//avec paramètres
 	public MoteurHybride( String cylindre, double prixMoteur ) {
-		this.setType( TypeMoteur.HYBRIDE );
-		this.setCylindre( cylindre );
-		this.setPrixMoteur( prixMoteur );
+		super( cylindre,prixMoteur );
+		this.type = TypeMoteur.HYBRIDE ;
 	}
 }

@@ -6,31 +6,14 @@ public class GPS implements Option, Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
-	private double prixOption;
+	private double prixOption = 113.5;
 
-
-	//----------CONSTRUCTEUR----------
-	//par défaut
-	public GPS() {
-		prixOption = 113.5 ;
-	}
-	
-//	Utile pour tester le bon fonctionnement de la comparaison 
-//	d'objet dans la methode "addVoiture" de l'objet Garage	
-//	public GPS(Double prixOption) {
-//		this.prixOption = prixOption ;
-//	}
 	
 	//----------GETTERS----------
-	public double getPrixOption() {
+	public double getPrix() {
 		return prixOption;
 	}
 
-
-	@Override
-	public String toString() {
-		return getClass().getSimpleName() + " (" + getPrixOption() + "€)" ;
-	}
 
 	@Override
 	public int hashCode() {

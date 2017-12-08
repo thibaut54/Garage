@@ -6,23 +6,12 @@ public class SiegeChauffant implements Option, Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
-	private double prixOption;
+	private double prixOption =  562.9;
 
-
-	//----------CONSTRUCTEUR----------
-	//par défaut
-	public SiegeChauffant() {
-		prixOption =  562.9 ;
-	}
-	
 
 	//----------GETTERS----------
-	public double getPrixOption() {
+	public double getPrix() {
 		return prixOption;
-	}
-
-	public String toString() {
-		return getClass().getSimpleName() + " (" + getPrixOption() + "€)" ;
 	}
 
 

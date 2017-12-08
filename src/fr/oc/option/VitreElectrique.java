@@ -6,25 +6,14 @@ public class VitreElectrique implements Option, Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
-	private double prixOption;
+	private double prixOption = 212.35;
 
-
-	//----------CONSTRUCTEUR----------
-	//par défaut
-	public VitreElectrique() {
-		prixOption = 212.35 ;
-	}
-	
 	
 	//----------GETTERS----------
-	public double getPrixOption() {
+	public double getPrix() {
 		return prixOption;
 	}
 
-
-	public String toString() {
-		return getClass().getSimpleName() + " (" + getPrixOption() + "€)" ;
-	}
 
 	@Override
 	public int hashCode() {

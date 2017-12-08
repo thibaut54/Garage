@@ -6,24 +6,14 @@ public class Climatisation implements Option, Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
-	private double prixOption;
+	private double prixOption = 347.3;
 
-
-	//----------CONSTRUCTEUR----------
-	//par défaut
-	public Climatisation() {
-		prixOption = 347.3 ;
-	}
 		
 	//----------GETTERS----------
-	public double getPrixOption() {
+	public double getPrix() {
 		return prixOption;
 	}
 
-
-	public String toString() {
-		return getClass().getSimpleName() + " (" + getPrixOption() + "€)" ;
-	}
 
 	@Override
 	public int hashCode() {

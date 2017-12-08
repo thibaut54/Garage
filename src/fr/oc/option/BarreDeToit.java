@@ -6,24 +6,21 @@ public class BarreDeToit implements Option, Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
-	private double prixOption;
+	private double prixOption = 29.9;
 
 
 	//----------CONSTRUCTEUR----------
 	//par défaut
-	public BarreDeToit() {
-		prixOption = 29.9 ;
-	}
+//	public BarreDeToit() {
+//		prixOption = 29.9 ;
+//	}
+	//Quel avantage/inconvénient à passer par un constructeur 
+	//VS simplement intitialiser prixOption à la valeur souhaitée 
 		
 	
 	//----------GETTERS----------
-	public double getPrixOption() {
+	public double getPrix() {
 		return prixOption;
-	}
-
-
-	public String toString() {
-		return getClass().getSimpleName() + " (" + getPrixOption() + "€)" ;
 	}
 
 

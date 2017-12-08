@@ -7,9 +7,7 @@ public class Lagouna extends Vehicule {
 	//----------CONSTRUCTEUR----------
 	//par défaut
 	public Lagouna() {
-		this.setPrixVehicule( 23123d );
-		this.setMarque( Marque.PIGEOT );
-		this.setMoteur( null );
+		super( 23123d , Marque.PIGEOT );
 	}
 }
 
