@@ -1,8 +1,8 @@
 package fr.oc.exception;
 
-import java.io.EOFException;
+import java.io.StreamCorruptedException;
 
-public class ContenuFichierInvalideException extends EOFException{
+public class ContenuFichierInvalideException extends StreamCorruptedException{
 
 	private static final long serialVersionUID = 3084726044216569170L;
 

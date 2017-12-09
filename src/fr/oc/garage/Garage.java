@@ -56,15 +56,17 @@ public class Garage {
 	//Methode de dé-serialization
 	@SuppressWarnings("unchecked")
 	public List<Vehicule> unserialArray( List<Vehicule> vUnserial ) {
-		File f = new File( "garage.txt" ); 
+		
 		try {
+			File f = new File( "garage.txt" ); 
 			testFichierExist(f);
 			FileInputStream fis = new FileInputStream( "garage.txt" );
 			ObjectInputStream ois = new ObjectInputStream( fis );
-			testFichier( ois ); 									//Fonctionne pas... pb à régler avec Etienne
+//			testFichier( ois );
 			vUnserial = ( List<Vehicule> )ois.readObject();
+//			testFichier( vUnserial ); 									//Fonctionne pas... pb à régler avec Etienne
 			ois.close();
-		} catch ( GarageVideException e ) {
+		} catch ( GarageVideException e ) { 
 			e.getMessage();
 		} catch( ContenuFichierInvalideException e ) {
 			e.getMessage();
@@ -82,11 +84,25 @@ public class Garage {
 	
 	//Methode visant à tester le contenu du fichier garage.txt afin de s'assurer qu'il contient bien une arrayList d'objet de type Voiture...
 	//...mais j'arrive pas à la faire fonctionner !!!
-	private <T> void testFichier (T obj) throws ContenuFichierInvalideException {
-		if ( !( obj instanceof List ) ) {
-			throw new ContenuFichierInvalideException( );
-		}
-	}
+//	private  testFichier ( ObjectInputStream list , List<Vehicule> vUnserialTemp ) throws ContenuFichierInvalideException {
+//		if( !( list instanceof List ) ) {
+//			throw new ContenuFichierInvalideException( );
+//		} else {
+//			vUnserialTemp = ( List<Vehicule> )list.readObject() );
+//		}
+//		return vUnserialTemp;
+//	}
+	
+//	private void List<Vehicule> testFichier( Object objectList ) {
+//		List<Vehicule> list = new ArrayList<>();
+//		if ( objectList instanceof List<?> ) {
+//			for ( Object object : (List<?> ) objectList) {
+//				if ( object instanceof Vehicule ) {
+//					list.add( ( Vehicule ) object );
+//				}
+//			}
+//		}
+//	}
 	
 	private void testFichierExist(File f) throws GarageVideException {
 		if ( !f.exists() ) {
