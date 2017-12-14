@@ -12,22 +12,22 @@ public abstract class Vehicule implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	//----------ATTRIBUTS----------
-	private double prix;
+	private Double prix;
 	private List<Option> options = new ArrayList<>();
 	private Marque nomMarque;
 	private Moteur moteur;
 
 	
 	//----------CONSTRUCTEUR----------
-	public Vehicule( double prix , Marque nomMarque ) {
+	public Vehicule( Double prix , Marque nomMarque ) {
 		this.prix = prix;
 		this.nomMarque = nomMarque;
 	}
 	
 	
 	//----------GETTERS----------
-	public double getPrix() {
-		double prixOptionTotal = 0.0;
+	public Double getPrix() {
+		Double prixOptionTotal = 0.0;
 		for (Option option : options) {
 			prixOptionTotal += option.getPrix()  ;
 		}
@@ -66,9 +66,7 @@ public abstract class Vehicule implements Serializable{
 		result = prime * result + ((moteur == null) ? 0 : moteur.hashCode());
 		result = prime * result + ((nomMarque == null) ? 0 : nomMarque.hashCode());
 		result = prime * result + ((options == null) ? 0 : options.hashCode());
-		long temp;
-		temp = Double.doubleToLongBits(prix);
-		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + ((prix == null) ? 0 : prix.hashCode());
 		return result;
 	}
 
@@ -93,7 +91,10 @@ public abstract class Vehicule implements Serializable{
 				return false;
 		} else if (!options.equals(other.options))
 			return false;
-		if (Double.doubleToLongBits(prix) != Double.doubleToLongBits(other.prix))
+		if (prix == null) {
+			if (other.prix != null)
+				return false;
+		} else if (!prix.equals(other.prix))
 			return false;
 		return true;
 	}
