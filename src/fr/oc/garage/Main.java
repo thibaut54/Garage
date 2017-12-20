@@ -1,18 +1,8 @@
 package fr.oc.garage;
 
-import fr.oc.moteur.MoteurDiesel;
-import fr.oc.moteur.MoteurElectrique;
-import fr.oc.moteur.MoteurEssence;
-import fr.oc.moteur.MoteurHybride;
-import fr.oc.option.BarreDeToit;
-import fr.oc.option.Climatisation;
-import fr.oc.option.GPS;
-import fr.oc.option.SiegeChauffant;
-import fr.oc.option.VitreElectrique;
-import fr.oc.vehicule.A300B;
-import fr.oc.vehicule.D4;
-import fr.oc.vehicule.Lagouna;
-import fr.oc.vehicule.Vehicule;
+import fr.oc.moteur.*;
+import fr.oc.option.*;
+import fr.oc.vehicule.*;
 
 public class Main {
 
