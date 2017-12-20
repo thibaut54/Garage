@@ -8,6 +8,6 @@ public class A300B extends Vehicule {
 	//par défaut
 	public A300B() {
 		super( 28457d , Marque.RENO );
-	};
+	}
 	
 }

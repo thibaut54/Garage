@@ -12,13 +12,14 @@ public abstract class Vehicule implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	//----------ATTRIBUTS----------
-	private Double prix;
+	private Double prix = 0.0; 		//le type Double est cependant déconseillé pour manipuler des valeurs monétaires
 	private List<Option> options = new ArrayList<>();
 	private Marque nomMarque;
 	private Moteur moteur;
 
 	
 	//----------CONSTRUCTEUR----------
+	//avec paramètres
 	public Vehicule( Double prix , Marque nomMarque ) {
 		this.prix = prix;
 		this.nomMarque = nomMarque;
@@ -27,13 +28,12 @@ public abstract class Vehicule implements Serializable{
 	
 	//----------GETTERS----------
 	public Double getPrix() {
-		Double prixOptionTotal = 0.0;
-		for (Option option : options) {
-			prixOptionTotal += option.getPrix()  ;
+		Double prixTotalOptions = 0.0;
+		for ( Option option : options ) {
+			prixTotalOptions += option.getPrix()  ;
 		}
-		return prix + prixOptionTotal;
+		return prix + prixTotalOptions;
 	}
-	
 	
 	//----------SETTERS----------
 	public void setMoteur( Moteur moteur ) {
@@ -44,15 +44,17 @@ public abstract class Vehicule implements Serializable{
 		options.add( opt );
 	}
 	
+	
 	@Override
 	public  String toString() {
 		String str = "";
+		//Ici, obligation de faire une boucle un peu complexe pour une question de mise en forme
+		//Plus précisement, pour ne pas avoir un ", " de trop à la fin de la liste d'option 
 		for (int i = 0 ; i < options.size() ; i++) {
 			str += options.get(i).getClass().getSimpleName() + " (" + options.get(i).getPrix() + "€)";
 			if(i != (options.size()-1) ) {
 				str += ", ";
-			} //Ici, obligation de faire une boucle un peu complexe pour une question de mise en forme
-			  //Plus précisement, pour ne pas avoir un ", " de trop à l'affichage de la liste d'option 
+			} 
 		}
 		return "Voiture " + nomMarque + " : " + getClass().getSimpleName() + " Moteur " + moteur 
 				+ " (" + this.prix + "€) ["  + str + "] d'une valeur total de " 

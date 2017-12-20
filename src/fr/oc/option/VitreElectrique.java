@@ -23,6 +23,7 @@ public class VitreElectrique implements Option, Serializable {
 		return result;
 	}
 
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

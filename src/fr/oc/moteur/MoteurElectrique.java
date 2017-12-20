@@ -6,8 +6,8 @@ public class MoteurElectrique extends Moteur {
 
 	//----------CONSTRUCTEURS----------
 	//avec paramètres
-	public MoteurElectrique( String cylindre, double prixMoteur ) {
-		super( cylindre,prixMoteur );
+	public MoteurElectrique( String cylindre , Double prixMoteur ) {
+		super( cylindre , prixMoteur );
 		this.type = TypeMoteur.ELECTRIQUE ;
 	}
 }

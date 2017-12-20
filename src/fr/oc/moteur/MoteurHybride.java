@@ -6,8 +6,8 @@ public class MoteurHybride extends Moteur {
 
 	//----------CONSTRUCTEURS----------
 	//avec paramètres
-	public MoteurHybride( String cylindre, double prixMoteur ) {
-		super( cylindre,prixMoteur );
+	public MoteurHybride( String cylindre , Double prixMoteur ) {
+		super( cylindre , prixMoteur );
 		this.type = TypeMoteur.HYBRIDE ;
 	}
 }

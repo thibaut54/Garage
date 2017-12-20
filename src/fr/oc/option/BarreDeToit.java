@@ -7,15 +7,6 @@ public class BarreDeToit implements Option, Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	private Double prixOption = 29.9;
-
-
-	//----------CONSTRUCTEUR----------
-	//par défaut
-//	public BarreDeToit() {
-//		prixOption = 29.9 ;
-//	}
-	//Quel avantage/inconvénient à passer par un constructeur 
-	//VS simplement intitialiser prixOption à la valeur souhaitée 
 		
 	
 	//----------GETTERS----------

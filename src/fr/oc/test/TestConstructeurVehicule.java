@@ -9,6 +9,7 @@ import fr.oc.vehicule.D4;
 import fr.oc.vehicule.Lagouna;
 import fr.oc.vehicule.Vehicule;
 
+//Petite classe de test JUnit, pas vraiment utile, implémentée dans un but pédagogique.
 class TestConstructeurVehicule {
 
 	@Test

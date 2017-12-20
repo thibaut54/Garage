@@ -30,7 +30,8 @@ public class Main {
     	
     	//Afin de tester la fonctionnalité de addVoiture, on ajoute un vehicule doublon
     	//REMARQUE : si l'on a deux véhicules identiques, impossible d'ajouter les deux, 
-    	//ce qui est restrictif car c'est tout à fait possible IRL, sans qu'il n'ai la même immatriculation 
+    	//ce qui est restrictif car c'est tout à fait possible dans la vraie vie, 
+    	//deux véhicules peuvent être identiques avec des immatriculations différentes
     	Vehicule lag3 = new Lagouna();
     	lag3.setMoteur(new MoteurEssence("150 Chevaux", 10256d));
     	lag3.addOption(new GPS());

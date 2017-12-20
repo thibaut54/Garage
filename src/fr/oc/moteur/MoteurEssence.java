@@ -6,8 +6,8 @@ public class MoteurEssence extends Moteur {
 
 	//----------CONSTRUCTEURS----------
 	//avec paramètres
-	public MoteurEssence( String cylindre, double prixMoteur ) {
-		super( cylindre,prixMoteur );
+	public MoteurEssence( String cylindre, Double prixMoteur ) {
+		super( cylindre , prixMoteur );
 		this.type = TypeMoteur.ESSENCE ;
 	}
 }
