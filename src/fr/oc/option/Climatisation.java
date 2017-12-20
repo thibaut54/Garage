@@ -6,11 +6,11 @@ public class Climatisation implements Option, Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
-	private double prixOption = 347.3;
+	private Double prixOption = 347.3;
 
 		
 	//----------GETTERS----------
-	public double getPrix() {
+	public Double getPrix() {
 		return prixOption;
 	}
 
@@ -19,9 +19,7 @@ public class Climatisation implements Option, Serializable {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		long temp;
-		temp = Double.doubleToLongBits(prixOption);
-		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + ((prixOption == null) ? 0 : prixOption.hashCode());
 		return result;
 	}
 
@@ -34,7 +32,10 @@ public class Climatisation implements Option, Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Climatisation other = (Climatisation) obj;
-		if (Double.doubleToLongBits(prixOption) != Double.doubleToLongBits(other.prixOption))
+		if (prixOption == null) {
+			if (other.prixOption != null)
+				return false;
+		} else if (!prixOption.equals(other.prixOption))
 			return false;
 		return true;
 	}

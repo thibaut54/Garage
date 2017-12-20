@@ -1,15 +1,13 @@
 package fr.oc.exception;
 
-public class ContenuFichierInvalideException extends Exception{
+import java.io.StreamCorruptedException;
+
+public class ContenuFichierInvalideException extends StreamCorruptedException{
 
 	private static final long serialVersionUID = 3084726044216569170L;
 
-	public ContenuFichierInvalideException( String message ) {
-		super( message );
+	public ContenuFichierInvalideException( ) {
+		System.err.println( "Le contenu du fichier est invalide." );
 	}
 	
-	public ContenuFichierInvalideException(  ) {
-		System.out.println( "bla" );
-		
-	}
 }
