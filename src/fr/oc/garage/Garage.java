@@ -85,7 +85,10 @@ public class Garage {
 	}
 	
 	
-	//Methode qui teste l'existence du fichier garage.ser et affiche un message d'erreur conformément à l'énoncé du TP
+	//Methode qui teste l'existence du fichier garage.ser 
+	//et affiche un message d'erreur conformément à l'énoncé du TP
+	//Remarque : il aurait été plus simple d'utiliser l'exception standard FileNotFoundException, 
+	//mais j'ai tenu à céer une exception personnalisée dans un but pédagogique
 	private void testFichierExist( File f ) throws GarageVideException {
 		if ( !f.exists() ) {
 			throw new GarageVideException();
