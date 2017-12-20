@@ -58,7 +58,9 @@ public abstract class Vehicule implements Serializable{
 		}
 		return "Voiture " + nomMarque + " : " + getClass().getSimpleName() + " Moteur " + moteur 
 				+ " (" + this.prix + "€) ["  + str + "] d'une valeur total de " 
-				+ getPrix() + " €\n";   	
+				+ getPrix() + " €\n";
+		//Les valeurs monétaires de nos variables sont ici mieux présentés que ce que l'énoncé demande, 
+		//c'est à dire avec moins de chiffres inutiles après la virgule.
 	}
 
 	@Override
