@@ -73,12 +73,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <package id="9" language="java" name="fr.oc.vehicule" project="Garage" file="/Garage/src/fr/oc/vehicule" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1758" y="479"/>    
-    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
-  </package>  
-  <class id="10" language="java" name="fr.oc.garage.Main" project="Garage" file="/Garage/src/fr/oc/garage/Main.java" 
+  <class id="9" language="java" name="fr.oc.garage.Main" project="Garage" file="/Garage/src/fr/oc/garage/Main.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1084" y="175"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -87,26 +82,16 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="11" language="java" name="fr.oc.test.TestConstructeurVehicule" project="Garage" 
+  <class id="10" language="java" name="fr.oc.test.TestConstructeurVehicule" project="Garage" 
     file="/Garage/src/fr/oc/test/TestConstructeurVehicule.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="135" width="171" x="565" y="119"/>    
+    <position height="-1" width="-1" x="1799" y="435"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <package id="12" language="java" name="fr.oc.option" project="Garage" file="/Garage/src/fr/oc/option" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="619" y="681"/>    
-    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
-  </package>  
-  <package id="13" language="java" name="fr.oc.moteur" project="Garage" file="/Garage/src/fr/oc/moteur" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1776" y="885"/>    
-    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
-  </package>  
-  <class id="14" language="java" name="fr.oc.vehicule.A300B" project="Garage" 
+  <class id="11" language="java" name="fr.oc.vehicule.A300B" project="Garage" 
     file="/Garage/src/fr/oc/vehicule/A300B.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="99" width="131" x="1615" y="631"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -115,7 +100,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="15" language="java" name="fr.oc.garage.Garage" project="Garage" file="/Garage/src/fr/oc/garage/Garage.java" 
+  <class id="12" language="java" name="fr.oc.garage.Garage" project="Garage" file="/Garage/src/fr/oc/garage/Garage.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="207" width="243" x="1674" y="119"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -124,7 +109,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="16" language="java" name="fr.oc.option.BarreDeToit" project="Garage" 
+  <class id="13" language="java" name="fr.oc.option.BarreDeToit" project="Garage" 
     file="/Garage/src/fr/oc/option/BarreDeToit.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="171" width="138" x="1100" y="366"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -133,7 +118,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="17" language="java" name="fr.oc.vehicule.Lagouna" project="Garage" 
+  <class id="14" language="java" name="fr.oc.vehicule.Lagouna" project="Garage" 
     file="/Garage/src/fr/oc/vehicule/Lagouna.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="99" width="131" x="1786" y="631"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -142,17 +127,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <package id="18" language="java" name="fr.oc.garage" project="Garage" file="/Garage/src/fr/oc/garage" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1798" y="48"/>    
-    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
-  </package>  
-  <package id="19" language="java" name="fr.oc.test" project="Garage" file="/Garage/src/fr/oc/test" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="462" y="179"/>    
-    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
-  </package>  
-  <class id="20" language="java" name="fr.oc.option.SiegeChauffant" project="Garage" 
+  <class id="15" language="java" name="fr.oc.option.SiegeChauffant" project="Garage" 
     file="/Garage/src/fr/oc/option/SiegeChauffant.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="171" width="138" x="1278" y="366"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -161,7 +136,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="21" language="java" name="fr.oc.vehicule.Vehicule" project="Garage" 
+  <class id="16" language="java" name="fr.oc.vehicule.Vehicule" project="Garage" 
     file="/Garage/src/fr/oc/vehicule/Vehicule.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="225" width="147" x="1456" y="366"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -170,7 +145,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="22" language="java" name="fr.oc.moteur.MoteurDiesel" project="Garage" 
+  <class id="17" language="java" name="fr.oc.moteur.MoteurDiesel" project="Garage" 
     file="/Garage/src/fr/oc/moteur/MoteurDiesel.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="99" width="160" x="1107" y="860"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -179,7 +154,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <enumeration id="23" language="java" name="fr.oc.moteur.TypeMoteur" project="Garage" 
+  <enumeration id="18" language="java" name="fr.oc.moteur.TypeMoteur" project="Garage" 
     file="/Garage/src/fr/oc/moteur/TypeMoteur.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="153" width="149" x="1307" y="860"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -188,7 +163,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <class id="24" language="java" name="fr.oc.moteur.MoteurHybride" project="Garage" 
+  <class id="19" language="java" name="fr.oc.moteur.MoteurHybride" project="Garage" 
     file="/Garage/src/fr/oc/moteur/MoteurHybride.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="99" width="168" x="1496" y="860"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -197,12 +172,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <package id="25" language="java" name="fr.oc.exception" project="Garage" file="/Garage/src/fr/oc/exception" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1543" y="72"/>    
-    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
-  </package>  
-  <class id="26" language="java" name="fr.oc.exception.GarageVideException" project="Garage" 
+  <class id="20" language="java" name="fr.oc.exception.GarageVideException" project="Garage" 
     file="/Garage/src/fr/oc/exception/GarageVideException.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="99" width="146" x="1488" y="119"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -211,7 +181,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="27" language="java" name="fr.oc.option.Option" project="Garage" 
+  <interface id="21" language="java" name="fr.oc.option.Option" project="Garage" 
     file="/Garage/src/fr/oc/option/Option.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="936" y="669"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -220,98 +190,134 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <dependency id="28">    
-    <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="26"/>  
-  </dependency>  
-  <association id="29">    
+  <association id="22">    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="30" name="type"/>      
-      <multiplicity id="31" minimum="0" maximum="1"/>    
+      <attribute id="23" name="type">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="24" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="23" navigable="true"/>    
+    <end type="TARGET" refId="18" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="32">    
-    <end type="SOURCE" refId="21" navigable="false">      
-      <attribute id="33" name="nomMarque"/>      
-      <multiplicity id="34" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="35">    
-    <end type="SOURCE" refId="24"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <realization id="36">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="27"/>  
+  <realization id="25">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="21"/>  
   </realization>  
-  <association id="37">    
-    <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="38" name="voitures"/>      
-      <multiplicity id="39" minimum="0" maximum="2147483647"/>    
+  <dependency id="26">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <dependency id="27">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <dependency id="28">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="20"/>  
+  </dependency>  
+  <generalization id="29">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <realization id="30">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="21"/>  
+  </realization>  
+  <association id="31">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="32" name="options">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="33" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="21" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="40">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="27"/>  
-  </realization>  
-  <generalization id="41">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <generalization id="42">    
-    <end type="SOURCE" refId="17"/>    
-    <end type="TARGET" refId="21"/>  
-  </generalization>  
-  <generalization id="43">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="21"/>  
-  </generalization>  
-  <association id="44">    
-    <end type="SOURCE" refId="21" navigable="false">      
-      <attribute id="45" name="moteur"/>      
-      <multiplicity id="46" minimum="0" maximum="1"/>    
+  <association id="34">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="35" name="moteur">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="36" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="47">    
-    <end type="SOURCE" refId="21" navigable="false">      
-      <attribute id="48" name="options"/>      
-      <multiplicity id="49" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="27" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="50">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="27"/>  
+  <dependency id="37">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <generalization id="38">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <realization id="39">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="21"/>  
   </realization>  
-  <generalization id="51">    
+  <generalization id="40">    
     <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="2"/>  
   </generalization>  
-  <generalization id="52">    
+  <generalization id="41">    
     <end type="SOURCE" refId="14"/>    
-    <end type="TARGET" refId="21"/>  
+    <end type="TARGET" refId="16"/>  
   </generalization>  
-  <generalization id="53">    
-    <end type="SOURCE" refId="22"/>    
+  <association id="42">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="43" name="nomMarque">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="44" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="45">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="21"/>  
+  </realization>  
+  <association id="46">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="47" name="voitures">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="48" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="49">    
+    <end type="SOURCE" refId="19"/>    
     <end type="TARGET" refId="2"/>  
   </generalization>  
-  <realization id="54">    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="27"/>  
-  </realization>  
-  <realization id="55">    
+  <dependency id="50">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="14"/>  
+  </dependency>  
+  <realization id="51">    
     <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="27"/>  
+    <end type="TARGET" refId="21"/>  
   </realization>  
+  <generalization id="52">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="53">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
